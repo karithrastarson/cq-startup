@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+<comment>CQ Startup Package</comment>
+<entry key="createdBy">kari.thrastarson</entry>
+<entry key="name">cqstartup-content</entry>
+<entry key="created">2016-10-05T10:43:53.342+0200</entry>
+<entry key="groupId">cq-startup</entry>
+<entry key="version">1.0-SNAPSHOT</entry>
+<entry key="requiresRoot">false</entry>
+<entry key="group">My AEM Journey</entry>
+<entry key="description">Maven Multimodule project for CQ Startup.</entry>
+<entry key="artifactId">cqstartup-content</entry>
+<entry key="path">/etc/packages/My AEM Journey/cqstartup-content.zip</entry>
+</properties>
