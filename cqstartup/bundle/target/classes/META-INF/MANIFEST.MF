@@ -1,5 +1,5 @@
 Manifest-Version: 1.0
-Bnd-LastModified: 1475661119774
+Bnd-LastModified: 1475672159607
 Build-Jdk: 1.7.0_79
 Built-By: kari.thrastarson
 Bundle-Description: Maven Multimodule project for CQ Startup.
@@ -9,9 +9,9 @@ Bundle-SymbolicName: cq-startup.cqstartup-bundle
 Bundle-Version: 1.0.0.SNAPSHOT
 Created-By: Apache Maven Bundle Plugin
 Export-Package: com.cqstartup.myaemjourney;version="1.0.0",com.cqstartup
- .myaemjourney.servlets;uses:="javax.jcr,org.slf4j,org.apache.sling.api.
- resource,org.apache.sling.api.servlets,javax.servlet,com.day.cq.wcm.api
- ,org.apache.sling.api,com.cqstartup.myaemjourney.utilities";version="1.
+ .myaemjourney.servlets;uses:="javax.jcr,org.apache.sling.api.servlets,j
+ avax.servlet,com.day.cq.wcm.api,org.apache.sling.api,com.cqstartup.myae
+ mjourney.utilities,org.slf4j,org.apache.sling.api.resource";version="1.
  0.0.SNAPSHOT",com.cqstartup.myaemjourney.utilities;uses:="javax.xml.par
  sers,org.w3c.dom";version="1.0.0.SNAPSHOT"
 Import-Package: com.cqstartup.myaemjourney;version="[1.0,2)",com.day.cq.

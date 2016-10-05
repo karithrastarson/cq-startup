@@ -4,7 +4,7 @@
 <comment>CQ Startup Package</comment>
 <entry key="createdBy">kari.thrastarson</entry>
 <entry key="name">cqstartup-content</entry>
-<entry key="created">2016-10-05T11:52:01.217+0200</entry>
+<entry key="created">2016-10-05T14:56:00.415+0200</entry>
 <entry key="groupId">cq-startup</entry>
 <entry key="version">1.0-SNAPSHOT</entry>
 <entry key="requiresRoot">false</entry>

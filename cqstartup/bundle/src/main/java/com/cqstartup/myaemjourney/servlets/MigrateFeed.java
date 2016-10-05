@@ -82,20 +82,23 @@ public class MigrateFeed extends SlingAllMethodsServlet {
         String internalPath = "";// req.getParameter("internal_path");
         if (internalPath.isEmpty()) {
             Page migratedBlog = null;
+
             try{
                 this.resourceResolver = this.resolverFactory.getAdministrativeResourceResolver(null);
                 PageManager pageManager = this.resourceResolver.adaptTo(PageManager.class);
-                 migratedBlog = pageManager.create("/content/", "migratedBlog", "/apps/social/blog/templates/page", "Migrated Blog");
-
-                internalPath = migratedBlog.getPath();
+                migratedBlog = pageManager.getPage("/content/migratedBlog");
+                if(migratedBlog == null) {
+                    migratedBlog = pageManager.create("/content/", "migratedBlog", "/apps/social/blog/templates/page", "Migrated Blog");
+                }
+                internalPath = migratedBlog.getPath()+"/";
             } catch (Exception e){e.printStackTrace();}
 
 
 
-    }
+        }
         if (externalPath.isEmpty()) {
             //externalPath = "http://fivethirtyeight.com/feed/";
-              externalPath = "http://blogs.novonordisk.com/graduates/feed";
+            externalPath = "http://blogs.novonordisk.com/graduates/feed";
             //externalPath = "C:\\Users\\kari.prastarson\\Desktop\\testfile.xml";
         }
 
@@ -267,6 +270,9 @@ public class MigrateFeed extends SlingAllMethodsServlet {
 
                 if(monthPage == null) {
                     log.info("monthPage is null");
+                    log.info("path:" + path+"\n");
+                    log.info("year:" + year+"\n");
+                    log.info("month:" + month+"\n");
                     monthPage = pageManager.create(path + year ,month, "social/blog/components/page", month);
                     Node monthNode = monthPage.adaptTo(Node.class);
                     Node jcrNode = monthPage.getContentResource().adaptTo(Node.class);
@@ -292,7 +298,7 @@ public class MigrateFeed extends SlingAllMethodsServlet {
     }
 
     protected void createComments(String blogPath, WPPost post) {
-        String path = "/content/usergenerated/content/novo/graduate_blog/";
+        String path = "/content/usergenerated/"+blogPath+"/";
 
         //First check if post has any comments:
         if(!post.getComments().isEmpty()) {
