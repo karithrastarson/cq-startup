@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?><metatype:MetaData xmlns:metatype="http://www.osgi.org/xmlns/metatype/v1.0.0" localization="OSGI-INF/metatype/metatype">
+    <OCD id="com.cqstartup.myaemjourney.servlets.MigrateFeed" name="%com.cqstartup.myaemjourney.servlets.MigrateFeed.name" description="%com.cqstartup.myaemjourney.servlets.MigrateFeed.description">
+        <AD id="sling.servlet.paths" type="String" default="/bin/migrate" name="%sling.servlet.paths.name" description="%sling.servlet.paths.description"/>
+        <AD id="sling.servlet.methods" type="String" default="GET" name="%sling.servlet.methods.name" description="%sling.servlet.methods.description"/>
+    </OCD>
+    <Designate pid="com.cqstartup.myaemjourney.servlets.MigrateFeed">
+        <Object ocdref="com.cqstartup.myaemjourney.servlets.MigrateFeed"/>
+    </Designate>
+</metatype:MetaData>

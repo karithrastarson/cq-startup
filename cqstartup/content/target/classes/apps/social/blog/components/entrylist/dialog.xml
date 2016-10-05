@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:primaryType="cq:Dialog"
+    title="Blog Entries"
+    xtype="tabpanel">
+    <items jcr:primaryType="cq:WidgetCollection">
+        <list
+            jcr:primaryType="cq:Widget"
+            title="Entry List"
+            xtype="panel">
+            <items jcr:primaryType="cq:WidgetCollection">
+                <limit
+                    jcr:primaryType="cq:Widget"
+                    fieldDescription="Maximum number of blog entries"
+                    fieldLabel="Limit"
+                    name="./limit"
+                    xtype="numberfield"/>
+                <pagination
+                    jcr:primaryType="cq:Widget"
+                    fieldDescription="Number of blog entries per page"
+                    fieldLabel="Paginate after"
+                    name="./pageMax"
+                    xtype="numberfield"/>
+                <dateFormat
+                    jcr:primaryType="cq:Widget"
+                    emptyText_noI18n="MMMMM dd, yyyy hh:mm a"
+                    fieldDescription="&lt;a href=&quot;http://download.oracle.com/javase/6/docs/api/java/text/SimpleDateFormat.html&quot; target=&quot;_blank&quot; style=&quot;cursor: pointer;&quot;>Date format&lt;/a> used  in the list of blog entries.&lt;br/>Sample: MMMMM dd, yyyy hh:mm a for August 31, 2010 10:35 AM"
+                    fieldLabel="Date format"
+                    name="./dateFormat"
+                    xtype="textfield"/>
+            </items>
+        </list>
+    </items>
+</jcr:root>

@@ -1,0 +1,8 @@
+com\cqstartup\myaemjourney\utilities\WPArchive.class
+com\cqstartup\myaemjourney\impl\HelloServiceImpl.class
+com\cqstartup\myaemjourney\impl\filters\LoggingFilter.class
+com\cqstartup\myaemjourney\servlets\MigrateFeed.class
+com\cqstartup\myaemjourney\HelloService.class
+com\cqstartup\myaemjourney\package-info.class
+com\cqstartup\myaemjourney\utilities\WPComment.class
+com\cqstartup\myaemjourney\utilities\WPPost.class
